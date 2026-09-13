@@ -10,3 +10,7 @@ AbstractTextEnc : is an Abstract class that implements AbstractDataEnc and is a 
 
 
 SiblingOneTextProcessor and SiblingTwoTextProcessor: Are classes that extend AbstractTextEnc and implement processText(Reader, Witer) this is how you can implement variations on text processing.
+
+DataEncTester.java : This is a test file that demonstrates how to use the classes to process first the text files, String and then Binary file and String.
+
+
