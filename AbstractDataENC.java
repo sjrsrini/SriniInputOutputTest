@@ -1,11 +1,11 @@
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 
-public abstract class AbstractDataENC {
+public abstract class AbstractDataENC implements DataENC {
 
     protected  abstract void processStream(InputStream input, OutputStream out) throws IOException;
 
-    protected void process(InputStream input, OutputStream output) throws IOException {
+    public void doEnc(InputStream input, OutputStream output) throws IOException {
         processStream(input,output);
         output.flush();
     }
