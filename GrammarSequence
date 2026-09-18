@@ -1,0 +1,29 @@
+Grammar1: + and -
+
+expr   ::= term ( ( "+" | "-" ) term )*
+term   ::= NUMBER
+NUMBER ::= [0-9]+
+
+Grammar2: Adding  * and /
+
+expr   ::= term ( ( "+" | "-" ) term )*
+term   ::= factor ( ( "*" | "/" ) factor )*
+factor ::= NUMBER
+NUMBER ::= [0-9]+
+
+
+Grammar3:  add Parenthesis 
+
+expr   ::= term ( ( "+" | "-" ) term )*
+term   ::= factor ( ( "*" | "/" ) factor )*
+factor ::= NUMBER | "(" expr ")"
+
+Grammar4: Add Variables
+
+program    ::= ( statement )*
+statement  ::= assignment | expr
+assignment ::= IDENTIFIER "=" expr
+expr       ::= term ( ( "+" | "-" ) term )*
+term       ::= factor ( ( "*" | "/" ) factor )*
+factor     ::= NUMBER | IDENTIFIER | "(" expr ")"
+IDENTIFIER ::= [a-zA-Z]+
