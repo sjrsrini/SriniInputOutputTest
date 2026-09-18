@@ -15,7 +15,8 @@ public abstract class AbstractDataENC implements DataENC {
             return null;
         }
 
-        byte[] inputBytes = inputText.getBytes(StandardCharsets.UTF_8);
+       // byte[] inputBytes = inputText.getBytes(StandardCharsets.UTF_8); // not needed...being done in subclass;
+        byte[] inputBytes = inputText.getBytes();
         ByteArrayInputStream streamInput = new ByteArrayInputStream(inputBytes);
         ByteArrayOutputStream streamOutput = new ByteArrayOutputStream();
 
@@ -25,6 +26,7 @@ public abstract class AbstractDataENC implements DataENC {
         } catch (IOException e){
             throw new RuntimeException("Unexpected error", e);
         }
-        return streamOutput.toString(StandardCharsets.UTF_8);
+        //return streamOutput.toString(StandardCharsets.UTF_8);// not needed... being done in subclass;
+        return streamOutput.toString();
     }
 }
